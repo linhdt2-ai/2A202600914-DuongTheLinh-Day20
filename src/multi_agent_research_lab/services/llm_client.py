@@ -7,8 +7,6 @@ from dataclasses import dataclass
 
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from multi_agent_research_lab.core.errors import StudentTodoError
-
 
 @dataclass(frozen=True)
 class LLMResponse:
@@ -22,8 +20,9 @@ class LLMClient:
     """Provider-agnostic LLM client skeleton."""
     
     def __init__(self) -> None:
-        from multi_agent_research_lab.core.config import get_settings
         from openai import OpenAI
+
+        from multi_agent_research_lab.core.config import get_settings
         
         self.settings = get_settings()
         # Initialize OpenAI client. If API key is not in settings, OpenAI SDK will try to read OPENAI_API_KEY from environment

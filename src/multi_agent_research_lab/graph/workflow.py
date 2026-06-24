@@ -1,6 +1,7 @@
 """LangGraph workflow skeleton."""
 
-from multi_agent_research_lab.core.errors import StudentTodoError
+from typing import Any, cast
+
 from multi_agent_research_lab.core.state import ResearchState
 
 
@@ -10,14 +11,15 @@ class MultiAgentWorkflow:
     Keep orchestration here; keep agent internals in `agents/`.
     """
 
-    def build(self) -> object:
+    def build(self) -> Any:
         """Create a LangGraph graph."""
-        from langgraph.graph import StateGraph, START, END
-        from multi_agent_research_lab.agents.supervisor import SupervisorAgent
-        from multi_agent_research_lab.agents.researcher import ResearcherAgent
+        from langgraph.graph import END, START, StateGraph
+
         from multi_agent_research_lab.agents.analyst import AnalystAgent
-        from multi_agent_research_lab.agents.writer import WriterAgent
         from multi_agent_research_lab.agents.critic import CriticAgent
+        from multi_agent_research_lab.agents.researcher import ResearcherAgent
+        from multi_agent_research_lab.agents.supervisor import SupervisorAgent
+        from multi_agent_research_lab.agents.writer import WriterAgent
 
         workflow = StateGraph(ResearchState)
 
@@ -64,4 +66,4 @@ class MultiAgentWorkflow:
         if isinstance(result, dict):
             # In case langgraph returns a dict representing the final state
             return ResearchState.model_validate(result)
-        return result
+        return cast(ResearchState, result)

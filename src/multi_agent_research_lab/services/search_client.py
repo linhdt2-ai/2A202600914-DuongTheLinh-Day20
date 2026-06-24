@@ -1,6 +1,5 @@
 """Search client abstraction for ResearcherAgent."""
 
-from multi_agent_research_lab.core.errors import StudentTodoError
 from multi_agent_research_lab.core.schemas import SourceDocument
 
 
@@ -9,8 +8,6 @@ class SearchClient:
 
     def search(self, query: str, max_results: int = 5) -> list[SourceDocument]:
         """Search for documents relevant to a query."""
-        from multi_agent_research_lab.core.config import get_settings
-        settings = get_settings()
         
         # Simple local mock implementation
         return [

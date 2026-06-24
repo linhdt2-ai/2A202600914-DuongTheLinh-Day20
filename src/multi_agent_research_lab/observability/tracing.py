@@ -13,13 +13,14 @@ from typing import Any
 @contextmanager
 def trace_span(name: str, attributes: dict[str, Any] | None = None) -> Iterator[dict[str, Any]]:
     """Minimal span context augmented with LangSmith tracing if available."""
-    from multi_agent_research_lab.core.config import get_settings
     import contextlib
+
+    from multi_agent_research_lab.core.config import get_settings
     
     settings = get_settings()
     
     # Initialize Langsmith traceable if API key is present
-    cm = contextlib.nullcontext()
+    cm: Any = contextlib.nullcontext()
     if settings.langsmith_api_key:
         try:
             from langsmith import trace

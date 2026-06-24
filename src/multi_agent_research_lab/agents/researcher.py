@@ -1,7 +1,6 @@
 """Researcher agent skeleton."""
 
 from multi_agent_research_lab.agents.base import BaseAgent
-from multi_agent_research_lab.core.errors import StudentTodoError
 from multi_agent_research_lab.core.state import ResearchState
 
 
@@ -12,8 +11,8 @@ class ResearcherAgent(BaseAgent):
 
     def run(self, state: ResearchState) -> ResearchState:
         """Populate `state.sources` and `state.research_notes`."""
-        from multi_agent_research_lab.services.search_client import SearchClient
         from multi_agent_research_lab.services.llm_client import LLMClient
+        from multi_agent_research_lab.services.search_client import SearchClient
         
         search_client = SearchClient()
         llm = LLMClient()

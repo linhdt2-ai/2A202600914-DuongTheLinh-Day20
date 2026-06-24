@@ -24,12 +24,13 @@ def render_markdown_report(metrics: list[BenchmarkMetrics]) -> str:
     lines.append("\n## Detailed Outputs Comparison\n")
     
     # Group by query
-    groups = {}
+    groups: dict[str, list[BenchmarkMetrics]] = {}
     for m in metrics:
         groups.setdefault(m.query, []).append(m)
         
     for query, runs in groups.items():
-        if not query: continue
+        if not query:
+            continue
         lines.append(f"### ❓ Query: {query}\n")
         for item in runs:
             cost = "-" if item.estimated_cost_usd is None else f"${item.estimated_cost_usd:.4f}"
@@ -70,13 +71,14 @@ def render_html_report(metrics: list[BenchmarkMetrics]) -> str:
         """
         
     # Group by query for side-by-side comparison
-    groups = {}
+    groups: dict[str, list[BenchmarkMetrics]] = {}
     for m in metrics:
         groups.setdefault(m.query, []).append(m)
         
     query_sections = ""
     for idx, (query, runs) in enumerate(groups.items()):
-        if not query: continue
+        if not query:
+            continue
         
         cards_html = ""
         for item in runs:

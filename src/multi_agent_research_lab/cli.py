@@ -1,7 +1,7 @@
 """Command-line entrypoint for the lab starter."""
 
-from typing import Annotated
 import time
+from typing import Annotated
 
 import typer
 from rich.console import Console
@@ -79,14 +79,19 @@ def run_benchmarks(
     config_path: str = typer.Option("configs/lab_default.yaml", help="Path to config file"),
 ) -> None:
     """Run benchmark for baseline vs multi-agent and output reports."""
-    import yaml
     import os
+
+    import yaml  # type: ignore
+
     from multi_agent_research_lab.evaluation.benchmark import run_benchmark
-    from multi_agent_research_lab.evaluation.report import render_markdown_report, render_html_report
+    from multi_agent_research_lab.evaluation.report import (
+        render_html_report,
+        render_markdown_report,
+    )
 
     _init()
     
-    with open(config_path, "r", encoding="utf-8") as f:
+    with open(config_path, encoding="utf-8") as f:
         config = yaml.safe_load(f)
         
     queries = config.get("benchmark", {}).get("queries", [])
@@ -99,12 +104,10 @@ def run_benchmarks(
         def run_baseline(q: str) -> ResearchState:
             req = ResearchQuery(query=q)
             state = ResearchState(request=req)
-            start_time = time.time()
             llm = LLMClient()
             system_prompt = "You are a helpful research assistant. Please provide a comprehensive and accurate answer to the user's query."
             try:
                 resp = llm.complete(system_prompt=system_prompt, user_prompt=q)
-                latency = time.time() - start_time
                 state.final_answer = resp.content
                 state.add_trace_event("baseline_run", {"input_tokens": resp.input_tokens, "output_tokens": resp.output_tokens, "cost_usd": resp.cost_usd})
             except Exception as e:
@@ -136,7 +139,7 @@ def run_benchmarks(
     with open("reports/benchmark_report.html", "w", encoding="utf-8") as f:
         f.write(html_report)
         
-    console.print(f"\n[bold green]✅ Benchmark completed! Reports saved to 'reports/benchmark_report.md' and 'reports/benchmark_report.html'.[/bold green]")
+    console.print("\n[bold green]✅ Benchmark completed! Reports saved to 'reports/benchmark_report.md' and 'reports/benchmark_report.html'.[/bold green]")
 
 
 if __name__ == "__main__":
