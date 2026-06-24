@@ -11,3 +11,6 @@ build/
 reports/*.json
 reports/*.md
 !.gitkeep
+.DS_Store
+uv.lock
+.DS_Store
