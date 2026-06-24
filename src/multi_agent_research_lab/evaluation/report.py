@@ -44,6 +44,11 @@ def render_markdown_report(metrics: list[BenchmarkMetrics]) -> str:
         "- **Multi-agent** systems exhibit higher latency and cost due to multi-step reasoning, but offer superior quality and robustness against hallucinations.",
         "- **Single-agent** baselines are significantly faster but may lack comprehensive coverage or deep analytical viewpoints.",
         "- The **Critic loop** ensures high validation rates, driving up final output quality at the expense of extra tokens.",
+        "",
+        "## Failure Mode & Solutions",
+        "",
+        "1. **Infinite Feedback Loop**: Khi Critic quá khắt khe, hệ thống có thể bị kẹt giữa Writer và Critic gây lãng phí tokens. **Cách fix**: Triển khai biến đếm `max_iterations` trong `SupervisorAgent` để ép kết thúc sớm nếu vượt quá số vòng lặp.",
+        "2. **Network/API Timeout**: Gọi LLM gặp lỗi mạng sẽ làm gãy cả luồng. **Cách fix**: Bọc hàm gọi API với decorator `@retry` từ thư viện `tenacity` để tự động thử lại với Exponential Backoff.",
         ""
     ])
     return "\n".join(lines) + "\n"
@@ -365,6 +370,14 @@ def render_html_report(metrics: list[BenchmarkMetrics]) -> str:
                         <li><strong>Multi-agent</strong> systems exhibit higher latency and cost due to multi-step reasoning, but offer superior quality and robustness against hallucinations.</li>
                         <li><strong>Single-agent</strong> baselines are significantly faster but may lack comprehensive coverage or deep analytical viewpoints.</li>
                         <li>The <strong>Critic loop</strong> ensures high validation rates, driving up final output quality at the expense of extra tokens.</li>
+                    </ul>
+                </div>
+                
+                <div class="failure-modes" style="margin-top: 30px; padding: 30px; background-color: #FFF1F2; border-radius: 12px; border-left: 5px solid #E11D48;">
+                    <h3 style="margin-top: 0; color: #E11D48;">⚠️ Failure Modes & Solutions</h3>
+                    <ul style="color: #4C0519; padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Infinite Feedback Loop:</strong> Khi Critic quá khắt khe, hệ thống có thể bị kẹt giữa Writer và Critic gây lãng phí tokens. <br><em>👉 Cách fix:</em> Triển khai biến đếm <code>max_iterations</code> trong SupervisorAgent để ép kết thúc sớm nếu vượt quá số vòng lặp.</li>
+                        <li><strong>Network/API Timeout:</strong> Gọi LLM gặp lỗi mạng sẽ làm gãy cả luồng. <br><em>👉 Cách fix:</em> Bọc hàm gọi API với decorator <code>@retry</code> từ thư viện <code>tenacity</code> để tự động thử lại với Exponential Backoff.</li>
                     </ul>
                 </div>
             </div>

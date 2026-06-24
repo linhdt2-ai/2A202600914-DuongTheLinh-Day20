@@ -236,7 +236,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">Avg Latency</div>
-                        <div class="stat-value">22.2s</div>
+                        <div class="stat-value">23.0s</div>
                     </div>
                 </div>
                 
@@ -255,50 +255,50 @@
                         
         <tr>
             <td><strong>Q1-Baseline</strong></td>
-            <td>11.00s</td>
+            <td>10.37s</td>
             <td><span style="color: #059669; font-weight: 500;">$0.0005</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 45 in / 783 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 45 in / 743 out. </span></td>
         </tr>
         
         <tr>
             <td><strong>Q1-MultiAgent</strong></td>
-            <td>31.22s</td>
-            <td><span style="color: #059669; font-weight: 500;">$0.0018</span></td>
+            <td>33.16s</td>
+            <td><span style="color: #059669; font-weight: 500;">$0.0019</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 3816 in / 2025 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 4001 in / 2114 out. </span></td>
         </tr>
         
         <tr>
             <td><strong>Q2-Baseline</strong></td>
-            <td>12.23s</td>
+            <td>11.54s</td>
             <td><span style="color: #059669; font-weight: 500;">$0.0004</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 40 in / 713 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 40 in / 674 out. </span></td>
         </tr>
         
         <tr>
             <td><strong>Q2-MultiAgent</strong></td>
-            <td>44.71s</td>
+            <td>31.12s</td>
             <td><span style="color: #059669; font-weight: 500;">$0.0018</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 3730 in / 2109 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 3758 in / 2089 out. </span></td>
         </tr>
         
         <tr>
             <td><strong>Q3-Baseline</strong></td>
-            <td>6.91s</td>
+            <td>7.11s</td>
             <td><span style="color: #059669; font-weight: 500;">$0.0003</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 40 in / 546 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 40 in / 543 out. </span></td>
         </tr>
         
         <tr>
             <td><strong>Q3-MultiAgent</strong></td>
-            <td>27.29s</td>
-            <td><span style="color: #059669; font-weight: 500;">$0.0016</span></td>
+            <td>44.48s</td>
+            <td><span style="color: #059669; font-weight: 500;">$0.0017</span></td>
             <td><span style="color: #4F46E5; font-weight: 600;">9.0/10</span></td>
-            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 3173 in / 1939 out. </span></td>
+            <td><span style="font-size: 0.9em; color: #6B7280;">Tokens: 3174 in / 2030 out. </span></td>
         </tr>
         
                     </tbody>
@@ -313,92 +313,73 @@
             <div class="run-card">
                 <h4>Q1-Baseline</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 11.00s</span>
+                    <span class="badge time-badge">⏱️ 10.37s</span>
                     <span class="badge cost-badge">💰 $0.0005</span>
                 </div>
                 <div class="run-output">
-                    <pre>GraphRAG (Graph Retrieval-Augmented Generation) is a state-of-the-art framework that integrates graph-based retrieval mechanisms with generative models to enhance the performance of natural language processing tasks, particularly in the context of information retrieval and question answering. This innovative approach leverages the structural properties of graphs to improve the relevance and accuracy of generated responses.
+                    <pre>GraphRAG (Graph Retrieval-Augmented Generation) is a state-of-the-art framework that integrates graph-based knowledge retrieval with generative models to enhance the performance of natural language processing tasks, particularly in the domain of question answering and information retrieval. This innovative approach leverages the structural properties of graphs to improve the efficiency and accuracy of information retrieval, making it a significant advancement in the field.
 
 ### Overview of GraphRAG
 
-GraphRAG builds upon the principles of retrieval-augmented generation (RAG), which combines the strengths of retrieval systems and generative models. Traditional RAG models typically retrieve relevant documents from a large corpus and then use a generative model to produce answers based on the retrieved information. However, these models often struggle with the complexity of relationships and entities present in the data, which can lead to suboptimal performance in tasks requiring deep contextual understanding.
+GraphRAG builds upon the principles of retrieval-augmented generation (RAG), which combines the strengths of retrieval systems and generative models. Traditional RAG models typically retrieve relevant documents from a large corpus and then use a generative model to produce answers based on the retrieved information. However, these models often struggle with the complexity and interrelatedness of information, especially when the data is structured in a non-linear fashion, such as in knowledge graphs.
 
-GraphRAG addresses these limitations by incorporating a graph-based representation of knowledge. In this framework, entities and their relationships are represented as nodes and edges in a graph, allowing for a more nuanced understanding of the information. This graph structure enables the model to capture complex interdependencies and contextual relationships that are often overlooked in linear text representations.
+GraphRAG addresses this limitation by incorporating graph structures that represent relationships between entities and concepts. In a graph, nodes represent entities (such as people, places, or concepts), while edges represent the relationships between them. This structure allows for more nuanced retrieval of information, as it can capture the context and connections that are often lost in linear text representations.
 
-### Key Components
+### Key Components of GraphRAG
 
-1. **Graph Construction**: The first step in GraphRAG involves constructing a knowledge graph from the input data. This graph is built using various sources of information, including structured databases, unstructured text, and existing knowledge graphs. The nodes represent entities (such as people, places, or concepts), while the edges represent the relationships between them.
+1. **Graph Construction**: The first step in GraphRAG involves constructing a knowledge graph from a corpus of text. This graph is built by extracting entities and their relationships, which can be done using various natural language processing techniques, including named entity recognition and relation extraction.
 
-2. **Graph-Based Retrieval**: Once the graph is constructed, GraphRAG employs a graph-based retrieval mechanism to identify relevant nodes and edges that pertain to the user's query. This retrieval process is more efficient and contextually aware than traditional keyword-based retrieval methods, as it considers the relationships between entities.
+2. **Graph-Based Retrieval**: Once the graph is constructed, GraphRAG employs graph-based algorithms to retrieve relevant information. This can include techniques such as graph traversal, where the model explores the graph to find related nodes and edges that provide contextually relevant information for a given query.
 
-3. **Generative Model**: After retrieving the relevant information from the graph, GraphRAG utilizes a generative model, typically based on transformer architectures, to synthesize a coherent and contextually appropriate response. The generative model is fine-tuned to leverage the structured information from the graph, allowing it to produce more accurate and informative outputs.
+3. **Generative Model Integration**: After retrieving relevant information from the graph, GraphRAG utilizes a generative model, typically based on transformer architectures, to synthesize responses. The generative model is fine-tuned to incorporate the retrieved graph information, allowing it to produce more accurate and contextually rich answers.
+
+4. **End-to-End Training**: One of the significant advantages of GraphRAG is its ability to be trained end-to-end. This means that the entire process—from graph construction to retrieval and generation—can be optimized simultaneously, leading to improved performance across the board.
 
 ### Advantages of GraphRAG
 
-The integration of graph-based retrieval with generative models offers several advantages:
-
-- **Enhanced Contextual Understanding**: By utilizing a graph structure, GraphRAG can better understand the relationships between different entities, leading to more contextually relevant responses.
-
-- **Improved Accuracy**: The graph-based retrieval mechanism reduces the noise associated with traditional retrieval methods, resulting in higher accuracy in the information provided to the generative model.
-
-- **Scalability**: GraphRAG can efficiently handle large datasets and complex queries, making it suitable for a wide range of applications, from customer support to academic research.
-
-- **Flexibility**: The framework can be adapted to various domains by modifying the graph construction process, allowing it to incorporate domain-specific knowledge.
+- **Enhanced Contextual Understanding**: By leveraging the relationships encoded in graphs, GraphRAG can provide answers that are more contextually relevant and nuanced compared to traditional RAG models.
+- **Improved Retrieval Efficiency**: The graph-based retrieval mechanism allows for faster and more efficient information retrieval, as it can quickly navigate through the graph to find relevant connections.
+- **Scalability**: GraphRAG can scale to large datasets, making it suitable for applications in various domains, including healthcare, finance, and general knowledge bases.
 
 ### Applications
 
-GraphRAG has significant implications for various applications, including:
-
-- **Question Answering**: By providing more accurate and contextually relevant answers, GraphRAG can enhance user experience in systems like virtual assistants and chatbots.
-
-- **Information Retrieval**: The framework can improve search engines and recommendation systems by delivering more precise results based on user queries.
-
-- **Knowledge Management**: Organizations can leverage GraphRAG to manage and retrieve information from large knowledge bases effectively.
+GraphRAG has shown promise in various applications, particularly in complex question-answering systems where understanding the relationships between entities is crucial. It can be applied in customer support systems, educational tools, and any domain where accurate and context-aware information retrieval is essential.
 
 ### Conclusion
 
-GraphRAG represents a significant advancement in the field of natural language processing by combining the strengths of graph-based retrieval and generative models. Its ability to understand complex relationships and provide accurate, contextually relevant responses positions it as a powerful tool for a variety of applications, paving the way for more intelligent and responsive AI systems. As research in this area continues to evolve, GraphRAG is likely to play a crucial role in shaping the future of information retrieval and generation.</pre>
+In summary, GraphRAG represents a significant advancement in the integration of graph-based knowledge retrieval with generative models. By utilizing the structural advantages of graphs, it enhances the ability to retrieve and generate information, leading to improved performance in natural language processing tasks. As research in this area continues to evolve, GraphRAG is likely to play a pivotal role in the development of more sophisticated AI systems capable of understanding and generating human-like responses.</pre>
                 </div>
             </div>
             
             <div class="run-card">
                 <h4>Q1-MultiAgent</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 31.22s</span>
-                    <span class="badge cost-badge">💰 $0.0018</span>
+                    <span class="badge time-badge">⏱️ 33.16s</span>
+                    <span class="badge cost-badge">💰 $0.0019</span>
                 </div>
                 <div class="run-output">
-                    <pre>### GraphRAG: A State-of-the-Art Approach in Natural Language Processing
+                    <pre>### Summary of GraphRAG State-of-the-Art
 
-GraphRAG, or Graph-based Retrieval-Augmented Generation, is an innovative framework that combines graph structures with retrieval-augmented generation techniques to enhance the performance of natural language processing (NLP) tasks. This approach aims to improve both the efficiency and accuracy of information retrieval and content generation by leveraging the inherent relationships and connections found in graph data.
+GraphRAG, or Graph-based Retrieval-Augmented Generation, is an innovative approach that integrates graph structures with retrieval-augmented generation techniques to enhance natural language processing (NLP) tasks. This method aims to improve both the efficiency and accuracy of information retrieval and content generation by leveraging the inherent relationships and structures found in graph data.
 
-#### Key Features of GraphRAG
+At its core, GraphRAG utilizes graph structures, represented by nodes and edges, to depict entities and their interconnections. This representation allows for a more nuanced understanding of context and relevance, which is crucial for effective data processing. The integration of retrieval-augmented generation combines traditional retrieval methods with generative models, enabling the system to extract pertinent information from a knowledge base and produce coherent responses.
 
-One of the defining characteristics of GraphRAG is its utilization of graph structures. In this framework, nodes represent entities or concepts, while edges denote the relationships between them. This representation allows for a more nuanced understanding of information, enabling complex queries and context-aware responses. By employing a graph-based representation, GraphRAG can capture intricate relationships that traditional linear data models often overlook, thus facilitating a deeper contextual understanding of the data.
+One of the standout features of GraphRAG is its scalability, which allows it to handle large datasets effectively. This makes it suitable for various applications across multiple domains, including healthcare, finance, and education. The state-of-the-art techniques employed in GraphRAG include the use of Graph Neural Networks (GNNs) to process graph data, enhancing the model's ability to learn from complex relationships. Additionally, attention mechanisms are implemented to focus on relevant parts of the graph during the generation process, thereby improving the quality of the output. The model also allows for fine-tuning with domain-specific data, which enhances its performance in targeted applications.
 
-Another significant aspect of GraphRAG is its retrieval-augmented generation capability. This hybrid approach combines traditional retrieval methods with generative models, allowing the system to extract relevant information from a knowledge base and generate coherent text grounded in factual data. This integration enhances the quality of the generated content, making it more reliable and contextually appropriate. The ability to ground generated text in factual data is particularly crucial in applications where accuracy is paramount.
+GraphRAG has shown promising results in several applications, particularly in question answering, content creation, and data analysis. By retrieving relevant information from structured knowledge graphs, it significantly enhances the accuracy of answers provided. In content creation, GraphRAG assists in generating informative and contextually relevant material by understanding the relationships between different pieces of information. Furthermore, it facilitates deeper insights in data analysis by examining the connections within data, making it a valuable tool for research and decision-making processes.
 
-#### Performance and Applications
+Comparative analyses indicate that GraphRAG outperforms traditional models in terms of accuracy, coherence, and relevance of generated content. Evaluations against standard benchmarks in NLP have demonstrated superior results in tasks such as summarization and information retrieval, solidifying its position as a leading approach in the field.
 
-GraphRAG has demonstrated state-of-the-art performance across various benchmarks, particularly excelling in tasks that require contextual understanding and factual accuracy. It has shown improved results in question answering, summarization, and dialogue systems when compared to previous models. This performance is attributed to its ability to provide contextually rich and accurate information, setting a new standard in the field of NLP.
+However, GraphRAG is not without its challenges. The complexity of graph construction can be resource-intensive and often requires domain expertise. While the model is designed for scalability, performance may degrade when dealing with extremely large graphs or highly dynamic data. Additionally, the intricate nature of graph-based models can complicate the interpretability of the reasoning behind specific outputs.
 
-The applications of GraphRAG are diverse and impactful. In information retrieval, it enhances search engines and knowledge bases by delivering more relevant and contextually appropriate results. In content generation, it proves useful for automated content creation, particularly in fields where accuracy and relevance are paramount, such as news articles and educational materials. Additionally, GraphRAG improves the performance of conversational agents, enabling chatbots and virtual assistants to provide informed and contextually relevant responses.
+Looking ahead, future research directions for GraphRAG include the development of improved graph construction techniques to automate the creation and updating of graphs, thereby reducing manual effort. There is also potential for cross-domain applications, exploring the use of GraphRAG in fields such as legal and scientific research. Enhancing user interaction through the development of user-friendly interfaces will also be crucial in enabling non-experts to effectively leverage GraphRAG's capabilities.
 
-#### Comparative Analysis
-
-When comparing GraphRAG to traditional models, the advantages become evident. Traditional models often rely on linear data representations, which can limit their ability to understand complex relationships. In contrast, GraphRAG's graph-based approach offers a more holistic view of data, leading to superior contextual understanding and retrieval capabilities. Performance metrics indicate that GraphRAG consistently outperforms traditional retrieval and generation models in terms of accuracy, relevance, and coherence of generated text.
-
-#### Challenges and Future Directions
-
-Despite its advancements, GraphRAG faces challenges, particularly regarding scalability. As the size of the graph increases, maintaining performance and efficiency can become problematic. Future research may focus on optimizing graph structures and retrieval algorithms to address these issues. Additionally, exploring synergies with other AI technologies, such as deep learning and reinforcement learning, could further enhance GraphRAG's capabilities. Real-world applications in various domains, including healthcare, finance, and education, are also areas for continued exploration to assess the versatility and adaptability of this approach.
-
-#### Conclusion
-
-In conclusion, GraphRAG represents a significant advancement in NLP by integrating graph-based knowledge representation with retrieval-augmented generation techniques. Its ability to provide contextually rich and accurate information makes it a promising tool for various applications, paving the way for future research and development in intelligent information systems. As the field of NLP continues to evolve, GraphRAG stands out as a model that not only enhances current capabilities but also sets the stage for future innovations in the domain. 
+In conclusion, GraphRAG represents a significant advancement in NLP by integrating graph theory with retrieval-augmented generation techniques. Its ability to understand and utilize complex relationships within data positions it as a powerful tool for various applications, although challenges in graph construction and interpretability remain. Continued research and development are anticipated to address these issues and broaden its applicability across different domains.
 
 ### References
-- Research on GraphRAG and its applications in NLP.
-- Comparative studies on traditional models versus graph-based approaches in information retrieval and content generation.</pre>
+- Zhang, Y., et al. (2022). "Graph Neural Networks for Natural Language Processing: A Survey." *Journal of Machine Learning Research*.
+- Chen, J., et al. (2023). "Retrieval-Augmented Generation for Knowledge-Intensive Tasks." *Proceedings of the Association for Computational Linguistics*.
+- Wang, X., et al. (2023). "Evaluating the Performance of Graph-Based Models in NLP." *International Conference on Learning Representations*.</pre>
                 </div>
             </div>
             
@@ -412,7 +393,7 @@ In conclusion, GraphRAG represents a significant advancement in NLP by integrati
             <div class="run-card">
                 <h4>Q2-Baseline</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 12.23s</span>
+                    <span class="badge time-badge">⏱️ 11.54s</span>
                     <span class="badge cost-badge">💰 $0.0004</span>
                 </div>
                 <div class="run-output">
@@ -421,118 +402,124 @@ In conclusion, GraphRAG represents a significant advancement in NLP by integrati
 ### Single-Agent Workflow
 
 **Definition:**
-In a single-agent workflow, a single customer support representative handles all aspects of a customer's inquiry or issue from start to finish.
+In a single-agent workflow, a single customer support representative handles all aspects of a customer’s inquiry or issue from start to finish.
 
 **Characteristics:**
-- **Ownership:** One agent is responsible for the entire customer interaction, ensuring continuity and a personal touch.
-- **Simplicity:** The process is straightforward, with fewer handoffs, which can lead to quicker resolutions.
-- **Consistency:** The customer receives a consistent experience since they interact with the same agent throughout the process.
+- **Personalized Interaction:** The same agent communicates with the customer throughout the entire process, fostering a personal connection.
+- **Consistency:** The customer receives consistent information and support since they are dealing with one individual.
+- **Simplicity:** The workflow is straightforward, with fewer handoffs, which can lead to quicker resolutions for straightforward issues.
 
 **Advantages:**
-1. **Personalization:** Customers may feel more valued as they interact with the same agent who understands their history and preferences.
-2. **Efficiency in Communication:** Reduces the risk of miscommunication that can occur when multiple agents are involved.
-3. **Faster Resolution:** Issues can often be resolved more quickly without the need for transferring cases between agents.
+1. **Customer Relationship:** Builds rapport and trust as customers interact with the same agent.
+2. **Accountability:** The agent is fully responsible for the resolution, which can lead to higher ownership of the issue.
+3. **Efficiency for Simple Issues:** For straightforward queries, this model can be faster as there are no transfers between agents.
 
 **Challenges:**
-1. **Scalability:** As customer volume increases, a single agent may become overwhelmed, leading to longer wait times and potential burnout.
-2. **Limited Expertise:** An individual agent may not have all the necessary knowledge to handle complex issues, which can lead to delays.
-3. **Dependency:** If the agent is unavailable (due to illness, vacation, etc.), customer support can be severely impacted.
+1. **Scalability:** As customer volume increases, a single agent may struggle to handle multiple inquiries effectively.
+2. **Limited Expertise:** An agent may not have all the answers, leading to potential delays if they need to research or escalate issues.
+3. **Burnout Risk:** Continuous handling of all inquiries can lead to agent fatigue and burnout.
 
 ### Multi-Agent Workflow
 
 **Definition:**
-In a multi-agent workflow, multiple customer support representatives collaborate to address customer inquiries, often involving different specialists for various aspects of the issue.
+In a multi-agent workflow, multiple customer support representatives collaborate to address customer inquiries. This can involve different agents specializing in various areas or tiers of support.
 
 **Characteristics:**
-- **Team Collaboration:** Different agents may handle different parts of the customer’s issue, leveraging their specific expertise.
-- **Handoffs:** Customers may be transferred between agents or departments, depending on the nature of their inquiry.
-- **Specialization:** Agents can specialize in specific areas (technical support, billing, etc.), allowing for more in-depth assistance.
+- **Team Collaboration:** Issues may be escalated to specialized agents or teams based on complexity or subject matter.
+- **Tiered Support:** Often involves a tiered system where initial inquiries are handled by general agents, and more complex issues are escalated to specialists.
+- **Use of Technology:** Often supported by customer relationship management (CRM) systems that allow for seamless transitions between agents.
 
 **Advantages:**
-1. **Scalability:** More agents can be added to handle increased customer volume, improving response times.
-2. **Expertise:** Access to a broader range of knowledge and skills, allowing for more complex issues to be resolved effectively.
-3. **Flexibility:** Agents can cover for each other, ensuring that customer support remains consistent even if one agent is unavailable.
+1. **Expertise Access:** Customers can be directed to agents with specific expertise, leading to more effective resolutions for complex issues.
+2. **Scalability:** More agents can handle a higher volume of inquiries, making it easier to manage peak times.
+3. **Reduced Wait Times:** With multiple agents available, customers may experience shorter wait times for assistance.
 
 **Challenges:**
-1. **Customer Experience:** Customers may feel frustrated if they have to repeat their issue to multiple agents or if there are delays in handoffs.
-2. **Communication Gaps:** Miscommunication can occur between agents, leading to inconsistent information being provided to customers.
-3. **Coordination Complexity:** Managing a multi-agent system requires effective coordination and communication tools to ensure seamless transitions.
+1. **Inconsistency:** Different agents may provide varying levels of service or information, which can confuse customers.
+2. **Handoffs:** Transferring customers between agents can lead to frustration, especially if they have to repeat their issue.
+3. **Coordination Complexity:** Requires effective communication and coordination among agents to ensure a seamless customer experience.
 
 ### Conclusion
 
-The choice between single-agent and multi-agent workflows in customer support largely depends on the specific needs of the business and its customer base. 
+The choice between single-agent and multi-agent workflows in customer support largely depends on the nature of the business, the volume of inquiries, and the complexity of the issues being addressed. 
 
-- **Single-agent workflows** are beneficial for businesses that prioritize personalized service and have a manageable volume of inquiries. They work well in environments where complex issues are less common and where building strong customer relationships is a priority.
+- **Single-agent workflows** are beneficial for businesses that prioritize personalized service and have a manageable volume of straightforward inquiries.
+- **Multi-agent workflows** are more suitable for larger organizations or those dealing with complex products or services, where specialized knowledge is crucial for effective support.
 
-- **Multi-agent workflows** are more suitable for larger organizations or those with high volumes of customer inquiries, where specialized knowledge is essential, and scalability is a concern. They can provide faster responses and a wider range of expertise but require careful management to ensure a positive customer experience.
-
-Ultimately, many organizations may find a hybrid approach beneficial, combining elements of both workflows to optimize customer support.</pre>
+Ultimately, many organizations may find a hybrid approach beneficial, combining elements of both workflows to optimize customer support efficiency and satisfaction.</pre>
                 </div>
             </div>
             
             <div class="run-card">
                 <h4>Q2-MultiAgent</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 44.71s</span>
+                    <span class="badge time-badge">⏱️ 31.12s</span>
                     <span class="badge cost-badge">💰 $0.0018</span>
                 </div>
                 <div class="run-output">
                     <pre>### Comparison of Single-Agent and Multi-Agent Workflows for Customer Support
 
-In the realm of customer support, organizations often face the decision of whether to implement a single-agent or multi-agent workflow. Each approach has its unique advantages and challenges, which can significantly impact efficiency, customer experience, scalability, cost implications, and technology integration. This comprehensive analysis aims to elucidate these differences, providing technical learners with a clear understanding of both workflows.
+In the realm of customer support, organizations often face the decision of implementing either single-agent or multi-agent workflows. Each approach has its unique advantages and challenges, which can significantly impact efficiency, customer experience, scalability, cost implications, and technology integration. This comprehensive analysis aims to elucidate these differences, providing insights for technical learners and decision-makers in customer support.
 
 #### 1. Efficiency
 
 **Single-Agent Workflows**:
 - **Pros**: Single-agent workflows streamline communication by providing customers with a single point of contact. This reduces the need for customers to repeat their issues, leading to a more cohesive interaction.
-- **Cons**: However, these workflows can struggle with high volumes of inquiries. If an agent is not equipped to handle a specific issue, resolution times may increase, leading to potential customer dissatisfaction.
+- **Cons**: However, this model has limited capacity. If the agent is unavailable or overwhelmed, it can result in longer wait times for customers, potentially leading to dissatisfaction.
 
 **Multi-Agent Workflows**:
-- **Pros**: In contrast, multi-agent workflows can manage a higher volume of inquiries simultaneously. Agents can specialize in different areas, which often results in quicker resolutions for complex issues.
-- **Cons**: The downside is the risk of fragmented communication. Customers may find themselves repeating information to multiple agents, which can lead to frustration and a disjointed experience.
+- **Pros**: Multi-agent systems can direct inquiries to the most appropriate agent, facilitating faster resolution times. This model can handle a higher volume of inquiries simultaneously, making it more efficient in busy environments.
+- **Cons**: The downside is the potential for fragmented communication. Customers may have to repeat their information to different agents, which can lead to frustration.
 
 #### 2. Customer Experience
 
 **Single-Agent Workflows**:
-- **Pros**: These workflows foster a strong rapport and trust between the customer and the agent, as the agent becomes familiar with the customer’s history and preferences. This personalized service can enhance customer satisfaction.
-- **Cons**: A significant drawback is that if the agent is unavailable, customers may experience delays in receiving support, which can negatively impact their experience.
+- **Pros**: This approach fosters rapport and trust, as the agent becomes familiar with the customer’s history and preferences, allowing for personalized service.
+- **Cons**: A risk exists if the agent lacks comprehensive knowledge or resources, leading to inconsistent service quality.
 
 **Multi-Agent Workflows**:
-- **Pros**: Multi-agent systems provide access to a broader range of expertise, allowing for faster responses to complex inquiries. This can enhance the overall customer experience, especially for intricate issues that require specialized knowledge.
-- **Cons**: However, customers may feel frustrated when they have to interact with multiple agents, which can detract from the personalized service that a single-agent workflow offers.
+- **Pros**: Multi-agent systems provide access to a broader range of expertise, enabling specialized support for complex issues.
+- **Cons**: Customers may experience frustration if they are transferred multiple times or if there is a lack of continuity in their interactions.
 
 #### 3. Scalability
 
 **Single-Agent Workflows**:
-- These workflows are inherently limited in scalability. As demand increases, the quality of service may decline unless additional agents are hired, which can be a slow and costly process.
+- Scalability is a significant challenge for single-agent systems. As demand increases, maintaining service levels without hiring additional agents becomes difficult.
 
 **Multi-Agent Workflows**:
-- Multi-agent systems are highly scalable. Organizations can easily add more agents to meet increasing demand without compromising service quality. This flexibility is particularly beneficial for businesses experiencing rapid growth or seasonal spikes in inquiries.
+- This model is inherently more scalable. Organizations can add agents with specific skills as needed, allowing them to adapt to fluctuating demand more effectively.
 
 #### 4. Cost Implications
 
 **Single-Agent Workflows**:
-- For small businesses with lower inquiry volumes, single-agent workflows can be more cost-effective. Fewer agents are needed, which can lead to lower operational costs.
+- While operational costs may be lower due to fewer staff, the potential for higher customer dissatisfaction and churn can lead to increased long-term costs.
 
 **Multi-Agent Workflows**:
-- Conversely, multi-agent systems often incur higher initial costs due to the need for more staff. However, they can lead to long-term savings through improved efficiency and customer retention, as faster resolution times can enhance customer loyalty and reduce churn.
+- Although initial costs are higher due to the need for more staff, this approach can lead to long-term savings through improved customer retention and satisfaction.
 
 #### 5. Technology Integration
 
 **Single-Agent Workflows**:
-- These systems may rely on simpler tools and processes, requiring less complex technology. This can be advantageous for smaller organizations with limited resources.
+- These workflows may rely on simpler technology solutions, as there is less need for complex systems to manage handoffs between agents.
 
 **Multi-Agent Workflows**:
-- Multi-agent systems typically require advanced technology, such as Customer Relationship Management (CRM) systems and collaboration tools, to manage interactions effectively. This technology is essential for ensuring seamless communication among agents and providing a cohesive customer experience.
+- Multi-agent systems often require advanced technology, such as Customer Relationship Management (CRM) systems and chatbots, to facilitate communication and track customer interactions across multiple agents.
 
 ### Conclusion
 
-The choice between single-agent and multi-agent workflows for customer support is influenced by various factors, including the size of the business, the volume of inquiries, and the complexity of customer issues. Single-agent workflows may be more suitable for smaller operations that prioritize personalized service, while multi-agent workflows are better equipped to handle high volumes efficiently.
+Both single-agent and multi-agent workflows present distinct advantages and disadvantages. The choice between them should be informed by the specific needs of the organization, the complexity of customer inquiries, and the desired customer experience. Organizations may also consider hybrid models that incorporate elements of both approaches to optimize customer support.
 
-While both approaches have their merits, organizations must carefully consider their specific needs and resources. For instance, a small business may thrive with a single-agent model, while a larger enterprise may benefit from the scalability and efficiency of a multi-agent system. Ultimately, the decision should align with the organization's customer support strategy and operational goals.
+### Recommendations for Further Research
+
+To deepen the understanding of these workflows, the following areas warrant further investigation:
+- **Case Studies**: Analyze organizations that have successfully implemented either workflow to provide concrete examples of outcomes.
+- **Customer Satisfaction Metrics**: Gather quantitative data comparing customer satisfaction across both workflows to assess their impact on the customer experience.
+- **Long-Term Impacts**: Investigate the long-term effects on customer loyalty and retention rates associated with each workflow type to clarify cost implications.
+
+By exploring these areas, organizations can make more informed decisions regarding their customer support strategies, ultimately enhancing service delivery and customer satisfaction.
 
 ### References
-- Research notes on single-agent and multi-agent workflows for customer support. (2023).</pre>
+- For further reading on customer support workflows, consider exploring resources such as industry reports, case studies, and academic journals that focus on customer service management and operational efficiency.</pre>
                 </div>
             </div>
             
@@ -546,7 +533,7 @@ While both approaches have their merits, organizations must carefully consider t
             <div class="run-card">
                 <h4>Q3-Baseline</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 6.91s</span>
+                    <span class="badge time-badge">⏱️ 7.11s</span>
                     <span class="badge cost-badge">💰 $0.0003</span>
                 </div>
                 <div class="run-output">
@@ -554,93 +541,94 @@ While both approaches have their merits, organizations must carefully consider t
 
 1. **Safety and Reliability**:
    - **Robustness**: Ensure the model can handle unexpected inputs without failing or producing harmful outputs.
-   - **Monitoring**: Implement continuous monitoring to detect and address issues in real-time, including performance degradation or inappropriate responses.
+   - **Monitoring**: Implement continuous monitoring to detect and address issues in real-time, including performance degradation or unexpected behavior.
 
 2. **Ethical Considerations**:
    - **Bias Mitigation**: Actively work to identify and reduce biases in the model’s outputs to prevent discrimination or unfair treatment of individuals or groups.
-   - **Transparency**: Maintain transparency about how the model works, its limitations, and the data it was trained on to build user trust.
+   - **Transparency**: Maintain transparency about how the model works, its limitations, and the data it was trained on to build trust with users.
 
 3. **User Privacy**:
-   - **Data Protection**: Ensure that user data is handled securely and in compliance with privacy regulations (e.g., GDPR, CCPA).
+   - **Data Protection**: Ensure that user data is handled securely and in compliance with relevant privacy regulations (e.g., GDPR, CCPA).
    - **Anonymization**: Where possible, anonymize user inputs to protect personal information.
 
 4. **Content Moderation**:
    - **Filtering Mechanisms**: Implement systems to filter out harmful, inappropriate, or misleading content generated by the model.
-   - **Human Oversight**: In sensitive applications, include human oversight to review and approve outputs before they are delivered to users.
+   - **Human Oversight**: Involve human reviewers in critical decision-making processes, especially in sensitive applications.
 
-5. **User Empowerment**:
-   - **User Control**: Provide users with options to customize their interactions with the LLM, including the ability to set preferences for tone, style, and content.
-   - **Feedback Loops**: Encourage user feedback to improve the model and address any issues that arise during use.
+5. **User Interaction Guidelines**:
+   - **Clear Instructions**: Provide users with clear guidelines on how to interact with the LLM, including what types of queries are appropriate.
+   - **Feedback Loops**: Establish mechanisms for users to provide feedback on the model’s performance, which can be used for continuous improvement.
 
-6. **Compliance and Legal Standards**:
-   - **Regulatory Compliance**: Ensure adherence to relevant laws and regulations governing AI use, including intellectual property rights and consumer protection laws.
-   - **Documentation**: Maintain thorough documentation of the model’s development, deployment, and any incidents that occur.
+6. **Performance Evaluation**:
+   - **Benchmarking**: Regularly evaluate the model against established benchmarks to assess its performance and identify areas for improvement.
+   - **A/B Testing**: Use A/B testing to compare different versions of the model or its configurations to optimize performance.
 
-7. **Performance Evaluation**:
-   - **Benchmarking**: Regularly evaluate the model’s performance against established benchmarks to ensure it meets quality standards.
-   - **User Testing**: Conduct user testing to gather insights on usability and effectiveness in real-world scenarios.
+7. **Scalability and Maintenance**:
+   - **Version Control**: Maintain version control for the model and its updates to ensure stability and traceability.
+   - **Resource Management**: Plan for the computational resources required for deployment and scaling, ensuring that the system can handle user demand.
 
-8. **Scalability and Maintenance**:
-   - **Infrastructure**: Design a scalable infrastructure that can handle varying loads and ensure consistent performance.
-   - **Regular Updates**: Keep the model updated with the latest data and improvements to maintain relevance and accuracy.
+8. **Legal Compliance**:
+   - **Regulatory Adherence**: Stay informed about and comply with relevant laws and regulations governing AI use, including intellectual property rights and consumer protection laws.
 
-By implementing these guardrails, organizations can better manage the risks associated with deploying LLM agents while maximizing their benefits in various applications.</pre>
+By implementing these guardrails, organizations can enhance the safety, reliability, and ethical use of LLM agents in production environments, ultimately leading to better user experiences and outcomes.</pre>
                 </div>
             </div>
             
             <div class="run-card">
                 <h4>Q3-MultiAgent</h4>
                 <div class="run-stats">
-                    <span class="badge time-badge">⏱️ 27.29s</span>
-                    <span class="badge cost-badge">💰 $0.0016</span>
+                    <span class="badge time-badge">⏱️ 44.48s</span>
+                    <span class="badge cost-badge">💰 $0.0017</span>
                 </div>
                 <div class="run-output">
                     <pre>### Summary of Production Guardrails for LLM Agents
 
-Production guardrails for Large Language Model (LLM) agents are essential frameworks designed to ensure the safe, ethical, and effective deployment of AI systems in real-world applications. These guardrails aim to mitigate risks associated with LLMs, such as misinformation, bias, and inappropriate content generation. Below is a comprehensive overview of the key components and implementation strategies for these guardrails.
+**Overview**  
+Production guardrails for Large Language Model (LLM) agents are essential frameworks designed to ensure the safe, ethical, and effective deployment of AI systems in real-world applications. These guardrails aim to mitigate risks associated with LLMs, such as misinformation, bias, and inappropriate content generation, thereby fostering trust and safety in AI technologies.
 
 #### Key Components of Production Guardrails
 
-1. **Safety Protocols**
-   - **Mechanisms to Prevent Harmful Outputs**: Implementing filters and checks to avoid generating harmful or misleading content.
-   - **Regular Updates**: Continuously refining safety measures based on user feedback and incident reports to adapt to new challenges.
+1. **Safety Protocols**  
+   - **Mechanisms to Prevent Harmful Outputs**: Implementing robust systems to filter and prevent the generation of harmful or inappropriate content is crucial. This includes using predefined safety filters and real-time monitoring.
+   - **Regular Updates**: Safety measures should be continuously refined based on user feedback and incident reports to adapt to emerging risks and challenges.
 
-2. **Ethical Guidelines**
-   - **Clear Ethical Standards**: Establishing guidelines that dictate acceptable use cases for LLMs.
-   - **Transparency**: Ensuring clarity regarding the training processes and data sources used to develop LLMs, fostering trust among users.
+2. **Ethical Guidelines**  
+   - **Clear Ethical Standards**: Establishing comprehensive ethical standards for the usage of LLMs is vital. This includes guidelines on acceptable use cases and the ethical implications of AI-generated content.
+   - **Transparency**: Organizations must ensure transparency regarding the training processes of LLMs and the data sources utilized, allowing stakeholders to understand the model's limitations and biases.
 
-3. **Bias Mitigation**
-   - **Data Audits**: Conducting thorough examinations of training datasets to identify and reduce inherent biases.
-   - **Diverse Datasets**: Utilizing a variety of data sources to enhance the fairness and inclusivity of LLM outputs.
+3. **Bias Mitigation**  
+   - **Data Audits**: Conducting thorough audits of training data to identify and reduce biases is essential. This involves analyzing datasets for representation and fairness.
+   - **Diverse Datasets**: Utilizing diverse datasets can enhance the fairness of LLM outputs, helping to mitigate the risk of perpetuating existing societal biases.
 
-4. **User Interaction Controls**
-   - **Feedback Mechanisms**: Designing user interfaces that facilitate feedback on LLM responses, allowing for real-time improvements.
-   - **User Consent Protocols**: Implementing clear protocols for data usage and interaction logging to respect user privacy.
+4. **User Interaction Controls**  
+   - **Feedback Mechanisms**: Designing user interfaces that facilitate feedback on LLM responses allows for continuous improvement and user engagement.
+   - **User Consent Protocols**: Implementing protocols for user consent regarding data usage and interaction logging is necessary to respect user privacy and autonomy.
 
-5. **Monitoring and Evaluation**
-   - **Continuous Performance Monitoring**: Regularly assessing LLM performance in production environments to ensure compliance with safety and ethical standards.
-   - **Evaluation Metrics**: Establishing metrics to measure the effectiveness and safety of LLM outputs, guiding future improvements.
+5. **Monitoring and Evaluation**  
+   - **Continuous Performance Monitoring**: Regularly monitoring LLM performance in production environments helps identify issues early and ensures compliance with safety standards.
+   - **Evaluation Metrics**: Establishing clear metrics to assess the effectiveness and safety of LLM outputs is crucial for ongoing evaluation and improvement.
 
-6. **Regulatory Compliance**
-   - **Adherence to Regulations**: Ensuring compliance with local and international laws governing AI deployment, including data privacy and ethical considerations.
-   - **Staying Updated**: Keeping abreast of evolving legal frameworks to maintain compliance and ethical integrity.
+6. **Regulatory Compliance**  
+   - **Adherence to Regulations**: Organizations must comply with local and international regulations governing AI deployment, ensuring that their practices align with legal standards.
+   - **Staying Updated**: Keeping abreast of evolving legal frameworks is essential for maintaining compliance and adapting to new requirements.
 
-7. **Training and Awareness**
-   - **Developer and User Training**: Providing comprehensive training on the responsible use of LLMs to all stakeholders involved.
-   - **Awareness Promotion**: Fostering a culture of awareness regarding the potential risks and limitations associated with LLM technology.
+7. **Human Oversight**  
+   - **Involvement of Moderators**: Ensuring that human moderators are involved in critical decision-making processes can help manage the risks associated with LLM outputs.
+   - **Training for Users and Moderators**: Providing training on responsible handling of LLM outputs is necessary to empower users and moderators to make informed decisions.
 
-#### Implementation Strategies
+8. **Scalability and Adaptability**  
+   - **Scalable Guardrails**: Designing guardrails that can scale with the growth of LLM applications ensures that safety measures remain effective as usage expands.
+   - **Adaptability**: Allowing for adaptability in guidelines as technology and societal norms evolve is crucial for maintaining relevance and effectiveness.
 
-- **Iterative Development**: Adopting an agile approach to continuously refine guardrails based on real-world usage and emerging challenges, ensuring that the framework remains relevant and effective.
-- **Stakeholder Engagement**: Involving a diverse range of stakeholders, including ethicists, legal experts, and community representatives, in the development and refinement of guardrails to ensure a holistic approach.
-- **Documentation and Reporting**: Maintaining comprehensive documentation of guardrail policies and practices, along with regular reporting on compliance and incident management to promote accountability.
+#### Conclusion  
+The implementation of production guardrails for LLM agents is vital for managing the risks associated with deploying AI technologies across various sectors. By focusing on safety, ethics, bias mitigation, user interaction, monitoring, compliance, human oversight, and scalability, organizations can foster trust and ensure the responsible use of LLMs. As the field of AI continues to evolve, these guardrails will play a critical role in shaping the future of AI deployment and its societal impact.
 
-#### Conclusion
+### References  
+While specific case studies and quantitative data were not provided in the research notes, the importance of these guardrails is supported by ongoing discussions in the AI ethics community regarding responsible AI deployment (Binns, 2018; Jobin et al., 2019). Future research should aim to provide empirical evidence and examples to illustrate the effectiveness of these guardrails in practice. 
 
-Establishing robust production guardrails for LLM agents is crucial for ensuring their responsible use across various applications. By focusing on safety, ethics, bias mitigation, user interaction, monitoring, compliance, and training, organizations can harness the potential of LLMs while minimizing associated risks. As the field of AI continues to evolve, ongoing refinement and adaptation of these guardrails will be necessary to address new challenges and maintain public trust in AI technologies.
-
-### References
-While specific case studies and quantitative data were not provided in the research notes, it is essential for organizations to seek out empirical evidence and best practices from the field to support the implementation of these guardrails effectively. Future research should focus on collecting data on the impact of these guardrails on LLM performance and safety to further validate their effectiveness.</pre>
+**Citations**:  
+- Binns, R. (2018). Fairness in Machine Learning: Lessons from Political Philosophy. In Proceedings of the 2018 Conference on Fairness, Accountability, and Transparency (FAT* 2018).
+- Jobin, A., Ienca, M., & Andorno, R. (2019). Artificial Intelligence: The Global Landscape of AI Ethics Guidelines. *Nature Machine Intelligence*, 1(9), 389-399.</pre>
                 </div>
             </div>
             
@@ -654,6 +642,14 @@ While specific case studies and quantitative data were not provided in the resea
                         <li><strong>Multi-agent</strong> systems exhibit higher latency and cost due to multi-step reasoning, but offer superior quality and robustness against hallucinations.</li>
                         <li><strong>Single-agent</strong> baselines are significantly faster but may lack comprehensive coverage or deep analytical viewpoints.</li>
                         <li>The <strong>Critic loop</strong> ensures high validation rates, driving up final output quality at the expense of extra tokens.</li>
+                    </ul>
+                </div>
+                
+                <div class="failure-modes" style="margin-top: 30px; padding: 30px; background-color: #FFF1F2; border-radius: 12px; border-left: 5px solid #E11D48;">
+                    <h3 style="margin-top: 0; color: #E11D48;">⚠️ Failure Modes & Solutions</h3>
+                    <ul style="color: #4C0519; padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Infinite Feedback Loop:</strong> Khi Critic quá khắt khe, hệ thống có thể bị kẹt giữa Writer và Critic gây lãng phí tokens. <br><em>👉 Cách fix:</em> Triển khai biến đếm <code>max_iterations</code> trong SupervisorAgent để ép kết thúc sớm nếu vượt quá số vòng lặp.</li>
+                        <li><strong>Network/API Timeout:</strong> Gọi LLM gặp lỗi mạng sẽ làm gãy cả luồng. <br><em>👉 Cách fix:</em> Bọc hàm gọi API với decorator <code>@retry</code> từ thư viện <code>tenacity</code> để tự động thử lại với Exponential Backoff.</li>
                     </ul>
                 </div>
             </div>
